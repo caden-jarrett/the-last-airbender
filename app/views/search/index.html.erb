@@ -1,9 +1,4 @@
 <body>
-  <nav class="navbar navbar-default" role="navigation">
-
-    <div class="search_index_header">
-      <p class ="index-nation"><%= @members.first.nation%></p>
-    </div>
 
 
     <div class="airbender-container">
@@ -14,22 +9,20 @@
     <div class="nation-members-display" id="members-display">
       <ul class="members">
         <% @members.each do |member| %>
-            <div id = '<%= member.name%>'>
-                Name:<br>
+            <div id = <%=member.name%>>
+                Name:
                 <%= member.name %> <br>
-                Allies:<br>
+                Allies:
                 <% member.allies.each do |ally| %>
                     <%= ally %> <br>
                 <% end %>
-                Enemies:<br>
+                Enemies:
                 <% member.enemies.each do |enemy| %>
                     <%= enemy %> <br>
                 <% end %>
-                Affiliations:<br>
-                <%= member.affiliations %> <br>
+                Affiliations:
+                <%= member.affiliation %> <br><br><br>
             </div>
         <% end %>
       </ul>
     </div>
-    
-  </nav>
