@@ -20,8 +20,8 @@ describe 'As a user, when I visit /,' do
         end
 
         it 'will show me the details of the first 25 members of the fire nation' do
-            within "#fire-member-1" do
-                expect(page).to have_content('')
+            within "#Chan (Fire Nation admiral)" do
+                expect(page).to have_content('Name:')
                 expect(page).to have_link("Chan (Fire Nation admiral)")
                 expect(page).to have_content('Allies:')
                 expect(page).to have_content('Ozai')
@@ -32,7 +32,8 @@ describe 'As a user, when I visit /,' do
 
             end
 
-            within "#fire-member-2" do
+            within "#Circus Master" do
+                expect(page).to have_content('Name:')
                 expect(page).to have_link("Circus master")
                 expect(page).to have_content('Allies:')
                 expect(page).to have_content('Ty Lee')
