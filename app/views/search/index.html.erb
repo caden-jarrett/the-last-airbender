@@ -1,0 +1,28 @@
+<body>
+
+
+    <div class="airbender-container">
+      <%= image_tag("avatar.jpg", class: "airbender") %>
+    </div>
+
+
+    <div class="nation-members-display" id="members-display">
+      <ul class="members">
+        <% @members.each do |member| %>
+            <div id = <%=member.name%>>
+                Name:
+                <%= member.name %> <br>
+                Allies:
+                <% member.allies.each do |ally| %>
+                    <%= ally %> <br>
+                <% end %>
+                Enemies:
+                <% member.enemies.each do |enemy| %>
+                    <%= enemy %> <br>
+                <% end %>
+                Affiliations:
+                <%= member.affiliation %> <br><br><br>
+            </div>
+        <% end %>
+      </ul>
+    </div>
